@@ -46,7 +46,6 @@ extend self
 	end
 
 	def get_sentence
-		get_input
 		get_name
 		get_verb
 		get_adj
