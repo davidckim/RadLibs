@@ -1,15 +1,15 @@
-"__name__ held the __adj__ __object__ open while he __verb__."
+"name held the adj object open while he verb."
 
-"__name__ __verb__ over the side of the __adj__ __object__."
+"name verb over the side of the adj object."
 
-"The __adj__ __object__ was destroyed when __name__ __verb__."
+"The adj object was destroyed when name verb."
 
-"Hello, __name__! Are you __verb__ the __adj__ __object__ today?"
+"Hello, name! Are you verb the adj object today?"
 
-"On the __adj__ day of school, __name__ __verb__ to the wrong __object__."
+"On the adj day of school, name verb to the wrong object."
 
-"__name__ was very __adj__ when she __verb__ the __object__."
+"name was very adj when she verb the object."
 
-"One __adj__ day, __name__ was __verb__ along, when suddenly he tripped over a __object__."
+"One adj day, name was verb along, when suddenly he tripped over a object."
 
-"A __object__ was __verb__ on the ground, when __name__ came across it, and was very __adj__."
+"A object was verb on the ground, when name came across it, and was very adj."
