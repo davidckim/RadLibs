@@ -3,7 +3,7 @@
 # adjective
 # object
 # hello
-# noun - 
+# noun -
 # verb
 # adjective
 # object
@@ -44,7 +44,16 @@ extend self
     puts welcome
     spacer
 	end
-  
+
+	def get_sentence
+		get_input
+		get_name
+		get_verb
+		get_adj
+		get_obj
+		create_hash
+	end
+
 	def get_input
 		@input = gets.chomp
 	end
@@ -98,14 +107,14 @@ STRING
 spacer
 	end
 
-	def print_sentence
-		puts "Your completed sentence is:"
+	def print_sentence(sentence)
+		puts "Your completed sentence is: #{sentence}"
 		spacer
 	end
 
 	def spacer
 		10.times do
-			print "-----" 
+			print "-----"
 			sleep(0.05)
 		end
 		puts ""
@@ -113,20 +122,20 @@ spacer
 
 	# def play_again
 	# 	puts "Do you want to keep playing?"
-	# 	case 
+	# 	case
 	# 	end
 	# end
 
-	
+
 
 end
 
 # Viewer.new
-Viewer.welcome_message
-Viewer.get_name
-Viewer.get_verb
-Viewer.get_adj
-Viewer.get_obj
-Viewer.create_hash
-Viewer.print_words
-Viewer.print_sentence
+# Viewer.welcome_message
+# Viewer.get_name
+# Viewer.get_verb
+# Viewer.get_adj
+# Viewer.get_obj
+# Viewer.create_hash
+# Viewer.print_words
+# Viewer.print_sentence

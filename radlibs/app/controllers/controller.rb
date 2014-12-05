@@ -1,30 +1,33 @@
-require_relative "model"
-require_relative "view"
-
 class Controller
 
   def self.get_input # {:noun, :adjective}
-    View.send_user_input
+    Viewer.welcome_message
+    Viewer.get_sentence
     # {name: "Me", adj: "This"}
   end
 
   def self.get_sentence
     Model.random_blank_sentence
-    # sentence_template = ["string", "string", :noun, "string", :adj]
+    # sentence_template = ["string", "string", ":noun", "string", :adj]
   end
 
   def self.construct_sentence
     sentence_template = self.get_sentence
-    user_input = self.get_input
+    puts user_input = self.get_input
 
+    puts sentence_template
     # fill in template with new words from user input
     new_sentence = sentence_template.map do |word|
 
       case word
-      when :name user_input[:noun]
-      when :adj user_input[:adjective]
-      when :verb user_input[:verb]
-      when :object user_input[:object]
+      when ":name"
+        user_input["name"]
+      when ":adj"
+        user_input["adj"]
+      when ":verb"
+        user_input["verb"]
+      when ":object"
+        user_input["obj"]
       else word
       end
 
@@ -34,7 +37,7 @@ class Controller
 
   def self.run_program
     result = self.construct_sentence
-    View.print_to_screen(result)
+    Viewer.print_sentence(result)
     Model.save_completed_sentence(result)
   end
 
