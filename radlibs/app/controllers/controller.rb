@@ -5,6 +5,7 @@ class Controller
 
   def self.get_input # {:noun, :adjective}
     View.send_user_input
+    # {name: "Me", adj: "This"}
   end
 
   def self.get_sentence
@@ -35,7 +36,6 @@ class Controller
     result = self.construct_sentence
     View.print_to_screen(result)
     Model.save_completed_sentence(result)
-    self.tweet(result)
   end
 
 end
