@@ -8,7 +8,7 @@ class Controller
   end
 
   def self.get_sentence
-    Controller.get_sentence
+    Model.random_blank_sentence
     # sentence_template = ["string", "string", :noun, "string", :adj]
   end
 
@@ -18,13 +18,15 @@ class Controller
 
     # fill in template with new words from user input
     new_sentence = sentence_template.map do |word|
-      if word == :noun
-        user_input[:noun]
-      elsif word == :adjective
-        user_input[:adjective]
-      else
-        word
+
+      case word
+      when :name user_input[:noun]
+      when :adj user_input[:adjective]
+      when :verb user_input[:verb]
+      when :object user_input[:object]
+      else word
       end
+
     end
     new_sentence.join(" ")
   end
