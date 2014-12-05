@@ -6,6 +6,7 @@ class Model
   end
 
   def self.save(completed_sentence)
+      CompletedLibs.create(sentence: completed_sentence)
   end
 end
 
