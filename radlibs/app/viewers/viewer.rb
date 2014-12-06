@@ -41,7 +41,7 @@ extend self
 
 
  STRING
-    puts welcome
+    puts welcome.red
     spacer
 	end
 
@@ -50,6 +50,7 @@ extend self
 		get_verb
 		get_adj
 		get_obj
+		print_words
 		create_hash
 	end
 
@@ -107,8 +108,9 @@ spacer
 	end
 
 	def print_sentence(sentence)
-		puts "Your completed sentence is: #{sentence}"
+		puts "Your completed sentence is:"
 		spacer
+		puts "#{sentence}"
 	end
 
 	def spacer

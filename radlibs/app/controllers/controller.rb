@@ -13,21 +13,21 @@ class Controller
 
   def self.construct_sentence
     sentence_template = self.get_sentence
-    puts user_input = self.get_input
+    user_input = self.get_input
 
-    puts sentence_template
+
     # fill in template with new words from user input
     new_sentence = sentence_template.map do |word|
 
       case word
       when ":name"
-        user_input["name"]
+        user_input["name"].light_blue
       when ":adj"
-        user_input["adj"]
+        user_input["adj"].light_green
       when ":verb"
-        user_input["verb"]
+        user_input["verb"].light_black
       when ":object"
-        user_input["obj"]
+        user_input["obj"].light_magenta
       else word
       end
 
@@ -38,7 +38,7 @@ class Controller
   def self.run_program
     result = self.construct_sentence
     Viewer.print_sentence(result)
-    Model.save_completed_sentence(result)
+    # Model.save_completed_sentence(result)
   end
 
 end
