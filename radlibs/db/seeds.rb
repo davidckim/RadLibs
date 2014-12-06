@@ -9,7 +9,11 @@ sentences =
   "On the :adj day of school, :name :verb to the wrong :object.",
   ":name was very :adj when she :verb the :object.",
   "One :adj day, :name was :verb along, when suddenly he tripped over a :object.",
-  "A :object was :verb on the ground, when :name came across it, and was very :adj."]
+  "A :object was :verb on the ground, when :name came across it, and was very :adj.",
+  "One day :name came across an :adj :object and decided to :verb all night long.",
+  "Legend says, :name :verb like a :adj :object .",
+  "Dude... did you hear that :name :verb the :adj :object ???",
+  ":name is hotter than a set of twin :object in a Mercedes Benz with the windows up when the temp goes up."]
 
   sentences.each do |sentence|
     Template.create(sentence: sentence)
