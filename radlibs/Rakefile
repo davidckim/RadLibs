@@ -42,4 +42,12 @@ end
 desc "Run the specs"
 RSpec::Core::RakeTask.new(:spec)
 
+desc "Run ALL"
+task "db:all" do
+  sh "rake db:drop"
+  sh "rake db:create"
+  sh "rake db:migrate"
+  sh "rake db:seed"
+end
+
 task :default  => :specs
